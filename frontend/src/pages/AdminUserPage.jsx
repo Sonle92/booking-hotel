@@ -11,6 +11,7 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import axios from "axios";
+import "../css_class/AdminPage.css"; 
 
 export function AdminUserPage() {
   const navigate = useNavigate();
@@ -38,6 +39,7 @@ export function AdminUserPage() {
       title: "Tên khách hàng",
       dataIndex: "username",
       key: "username",
+      className: "wrap-text",
       render: (text, record) => {
         return record.username !== "admin" ? <strong>{text}</strong> : null;
       },
@@ -46,6 +48,7 @@ export function AdminUserPage() {
       title: "email",
       dataIndex: "email",
       key: "email",
+      className: "wrap-text",
       render: (text, record) => {
         return record.username !== "admin" ? <strong>{text}</strong> : null;
       },
@@ -54,6 +57,7 @@ export function AdminUserPage() {
       title: "Điện thoại liên lạc",
       dataIndex: "telephone",
       key: "telephone",
+      className: "wrap-text",
       render: (text, record) => {
         return record.username !== "admin" ? <strong>{text}</strong> : null;
       },

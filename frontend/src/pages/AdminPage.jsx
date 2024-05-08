@@ -21,6 +21,7 @@ import {
 } from "@ant-design/icons";
 import axios from "axios";
 import HeaderAdmin from "../components/HeaderAdmin";
+import "../css_class/AdminPage.css"; 
 
 function AdminPage() {
   const navigate = useNavigate();
@@ -123,6 +124,7 @@ function AdminPage() {
       title: "Khu vực",
       dataIndex: "district",
       key: "district",
+      className: "wrap-text",
       render: (text, record) => {
         return <strong>{record?.district?.name}</strong>;
       },
@@ -131,6 +133,7 @@ function AdminPage() {
       title: "Tên khách sạn",
       dataIndex: "nameHotel",
       key: "nameHotel",
+      className: "wrap-text",
       render: (text) => {
         return <strong>{text}</strong>;
       },
@@ -139,6 +142,7 @@ function AdminPage() {
       title: "Thông tin mô tả",
       dataIndex: "description",
       key: "description",
+      className: "wrap-text",
       render: (text) => {
         return <strong>{text}</strong>;
       },
@@ -147,6 +151,7 @@ function AdminPage() {
       title: "Khoảng cách đến trung tâm",
       dataIndex: "distanceFormCenter",
       key: "distanceFormCenter",
+      className: "wrap-text",
       render: (text) => {
         return <strong>{text}</strong>;
       },
@@ -155,6 +160,7 @@ function AdminPage() {
       title: "Điểm đánh giá",
       dataIndex: "evaluate",
       key: "evaluate",
+      className: "wrap-text",
       render: (text) => {
         return <strong>{text}</strong>;
       },
